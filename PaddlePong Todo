@@ -1,0 +1,19 @@
+# todo:
+
+ - move event listener to gameInit() function to stop memory leaks
+ - CollisionDetector TOO MESSY!
+ - refactor CollisionDetector into more functions
+ - score counter
+ - win/lose case
+ - server sockets!
+ - paddle math for reflecting at different directions
+ - unit test game
+
+
+# When writing code
+
+ - write function on paper first with all vars, etc
+ - code out unit test
+ - code out actual function
+
+## INSTALL JS & PYTHON AUTOCOMPLETE
