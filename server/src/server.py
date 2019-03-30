@@ -9,24 +9,8 @@ socketio = SocketIO(app)
 @socketio.on('message')
 def handleMessage(msg):
 
-    isTooManyPlayers = playerCounter.checkIfTooManyPlayers()
-
-    if(isTooManyPlayers == False):
-        playerCounter.playerCount += 1
-
     print('Message: ' + msg)
-    # bounce message back
-    send(playerCounter.playerCount, broadcast=True)
+    #send("Hello", broadcast=True)
 
 if __name__ == '__main__':
 	socketio.run(app)
-
-class PlayerCounter:
-    playerCount = 0;
-
-    def checkIfTooManyPlayers(self):
-        if(self.playerCount == 2):
-            return True
-        return False
-
-playerCounter = PlayerCounter()

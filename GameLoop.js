@@ -1,5 +1,12 @@
 'use strict';
 
+
+let socket = io.connect('http://127.0.0.1:5000');
+
+socket.on('connect', function() {
+  socket.send('**CONNECTION**');
+});
+
 // create object initializer instance
 let gameInitializer = new GameInitializer();
 
