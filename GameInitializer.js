@@ -12,7 +12,6 @@ class GameInitializer {
     objectDrawer      = new ObjectDrawer();
     paddleController  = new PaddleController();
     collisionDetector = new CollisionDetector();
-    //socketEmitter     = new SocketEmitter();
     //document.addEventListener("keydown", paddleController.checkKeyInput, false);
   }
 

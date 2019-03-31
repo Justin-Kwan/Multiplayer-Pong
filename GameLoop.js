@@ -1,10 +1,9 @@
 'use strict';
 
-
 let socket = io.connect('http://127.0.0.1:5000');
 
 socket.on('connect', function() {
-  socket.send('**CONNECTION**');
+  socket.emit('CONNECTION');
 });
 
 // create object initializer instance
@@ -19,7 +18,6 @@ let player2;
 let objectDrawer;
 let paddleController;
 let collisionDetector;
-let socketEmitter;
 
 class GameLoop {
 

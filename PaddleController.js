@@ -4,25 +4,17 @@ class PaddleController {
 
   checkKeyInput() {
 
-    // let socket = io.connect('http://127.0.0.1:5000');
-    //
-    // socket.on('connect', function() {
-    //   socket.send('Player connected!');
-    // });
-
     document.addEventListener('keypress', function(event) {
 
       // PLAYER 1, w key
       if(event.keyCode === 119) {
         player1.keyUp   = true;
         player1.keyDown = false;
-        //socket.send("UP");
       }
       // s key
       else if(event.keyCode === 115) {
         player1.keyDown = true;
         player1.keyUp   = false;
-        //socket.send("DOWN");
       }
 
       // PLAYER 2, i key

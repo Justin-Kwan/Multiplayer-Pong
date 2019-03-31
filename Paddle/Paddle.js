@@ -21,11 +21,15 @@ class Paddle {
 
     if(this.keyUp == true && this.keyDown == false) {
       this.paddleY -= this.ySpeed;
-      socket.send("**PLAYER__UP**");
+
+      socket.emit("**PLAYER__UP**");
+
     }
     else if(this.keyDown == true && this.keyUp == false) {
       this.paddleY += this.ySpeed;
-      socket.send("**PLAYER__DOWN**");
+
+      socket.emit("**PLAYER__DOWN**");
+
     }
 
   }
